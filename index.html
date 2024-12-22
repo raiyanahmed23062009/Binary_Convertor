@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="main-page">
+            <h1>Binary Converter</h1>
+            <p>by Raiyan Ahmed Tauhid</p>
+            <p id="press-any-key">Press any key to continue...</p>
+        </div>
+        <div id="menu-page" class="hidden">
+            <h2>Binary Converter - Menu</h2>
+            <button onclick="showPage('text-to-binary')">1 - Text to Binary</button>
+            <button onclick="showPage('binary-to-text')">2 - Binary to Text</button>
+            <button onclick="showPage('number-to-binary')">3 - Number to Binary</button>
+            <button onclick="showPage('binary-to-number')">4 - Binary to Number</button>
+        </div>
+        <div id="text-to-binary" class="hidden">
+            <h2>Text to Binary</h2>
+            <textarea id="text-input" placeholder="Enter text here..."></textarea>
+            <button onclick="convertTextToBinary()">Convert</button>
+            <p id="text-to-binary-output"></p>
+            <button onclick="showPage('menu-page')">Back</button>
+        </div>
+        <div id="binary-to-text" class="hidden">
+            <h2>Binary to Text</h2>
+            <textarea id="binary-input" placeholder="Enter binary (space separated) here..."></textarea>
+            <button onclick="convertBinaryToText()">Convert</button>
+            <p id="binary-to-text-output"></p>
+            <button onclick="showPage('menu-page')">Back</button>
+        </div>
+        <div id="number-to-binary" class="hidden">
+            <h2>Number to Binary</h2>
+            <input type="number" id="number-input" placeholder="Enter number here...">
+            <button onclick="convertNumberToBinary()">Convert</button>
+            <p id="number-to-binary-output"></p>
+            <button onclick="showPage('menu-page')">Back</button>
+        </div>
+        <div id="binary-to-number" class="hidden">
+            <h2>Binary to Number</h2>
+            <input type="text" id="binary-input-num" placeholder="Enter binary here...">
+            <button onclick="convertBinaryToNumber()">Convert</button>
+            <p id="binary-to-number-output"></p>
+            <button onclick="showPage('menu-page')">Back</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
